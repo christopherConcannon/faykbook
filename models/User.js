@@ -16,7 +16,8 @@ const UserSchema = new Schema(
 				/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
 				'Please fill a valid email address'
 			]
-		},
+    },
+    // association with Thought model.  Field will be an id coming from the Thought
 		thoughts : [
 			{
 				type : Schema.Types.ObjectId,
@@ -45,4 +46,4 @@ UserSchema.virtual('friendCount').get(function() {
 
 const User = model('User', UserSchema);
 
-module.exports = Pizza;
+module.exports = User;
