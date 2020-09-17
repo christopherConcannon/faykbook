@@ -54,7 +54,7 @@ const userController = {
 			.catch((err) => res.status(400).json(err));
 	},
 
-	// // working...
+	// // working to delete user, but user's thoughts remain...
 	// deleteUser({ params }, res) {
 	// 	User.findOneAndDelete({ _id: params.id })
 	// 		.then((dbUserData) => {
@@ -67,7 +67,7 @@ const userController = {
 	// 		.catch((err) => res.status(400).json(err));
 	// },
 
-	// bonus...
+	// bonus remove deleted user's thoughts...
 	deleteUser({ params }, res) {
 		Thought.deleteMany({ userId: params.id })
 			.then(() => {

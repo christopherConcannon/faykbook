@@ -28,12 +28,10 @@ const thoughtController = {
     Thought.create(body)
       // destructure new thought _id from db response data
 			.then(({ _id, userId }) => {
-			// .then(({ _id }) => {
         // add new thought _id to user's thoughts array
 				return User.findOneAndUpdate(
 					// user _id
 					{ _id: userId },
-					// { _id: body.userId },
 					// thought _id
 					{ $push: { thoughts: _id } },
 					{ new: true }
@@ -74,8 +72,7 @@ const thoughtController = {
         }
         // remove deleted thought _id from user's thoughts array
         return User.findOneAndUpdate(
-          { username: deletedThought.username },
-          // { _id: params.userId },
+          { _id: deletedThought.userId },
           { $pull: { thoughts: params.id} },
           { new: true }
         )
