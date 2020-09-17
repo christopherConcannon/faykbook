@@ -43,6 +43,11 @@ const ThoughtSchema = new Schema(
       type: String,
       required: true
     },
+    // not sure about this...added to implement deletion of thoughts on user delete 
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
     reactions: [ ReactionSchema ]
   },
 	{
