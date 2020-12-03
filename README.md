@@ -8,7 +8,7 @@
 
 ## Description
 
-A social network API built with Express.js, MongoDB and Mongoose
+A social network API built with Express.js, MongoDB and Mongoose.  Includes routes to create users and add other users as friends.  Logged in users can create thoughts/posts and leave reactions to other users' thoughts/posts.
 
 ## Table of Contents
   * [Installation](#installation)
