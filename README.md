@@ -2,13 +2,10 @@
 
 ![MIT license badge](https://img.shields.io/badge/license-MIT-green)
 
-![Faybook](./assets/images/screenshot.png)
-
-
-
 ## Description
-
 A social network API built with Express.js, MongoDB and Mongoose.  Includes routes to create users and add other users as friends.  Logged in users can create thoughts/posts and leave reactions to other users' thoughts/posts.
+
+![Faybook](./assets/images/screenshot.png)
 
 ## Table of Contents
   * [Installation](#installation)
